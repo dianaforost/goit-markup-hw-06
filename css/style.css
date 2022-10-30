@@ -530,7 +530,6 @@ span{
 .portfolio-item{
     flex-basis: calc((100% - 60px) / 3);
     list-style: none;
-    border: 1px solid var(--border-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .thumb{
@@ -559,10 +558,6 @@ span{
 .portfolio-item:hover .overlay-text{
     transform: translateY(0);
 }
-.portfolio-img{
-    /* position: relative; */
-    margin-bottom: 20px;
-}
 .portfolio-title{
     margin-bottom: 4px;
     font-size: 18px;
@@ -570,14 +565,14 @@ span{
     letter-spacing: 0.06em;
 }
 .portfolio-text{
-    margin-bottom: 20px;
     color: var(--secondaryText-color);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
 }
 .portfolio-content{
-    padding-left: 24px;
+    padding: 20px 24px;
+    border: 1px solid var(--border-color);
 }
 .portfolio-link{
     text-decoration: none;
@@ -634,11 +629,17 @@ span{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 } 
+.close-icon{
+    position: absolute;
+    top: 50%;
+    left: 19%;
+    transform: translateY(-50%);
+}
 /* MODAL */
 .form-group{
     display: flex;
     flex-direction: column;
-    padding: 40px 40px 0 40px;
+    padding: 40px;
     cursor: auto;
 }
 .form-title{
@@ -672,9 +673,10 @@ span{
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-item:not(:last-child){
-    padding: 11px 0 11px 42px;
+    padding: 10px 10px 10px 42px;
 }
 .form-item:last-child{
+    height: 120px;
     max-width: 448px;
     padding: 12px 16px;
 }
@@ -703,6 +705,7 @@ span{
     margin-bottom: 30px;
 }
 .checkbox-input{
+    cursor: pointer;
     position: absolute;
     appearance: none;
     -webkit-appearance: none;
@@ -717,6 +720,7 @@ span{
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--secondaryText-color);
+    cursor: pointer;
 }
 .icon-checkbox{
     position: absolute;
@@ -727,10 +731,11 @@ span{
     left: 0;
     border: 2px solid var(--brand-color);
     border-radius: 2px;
+    cursor: pointer;
 }
-.icon-checkbox-holder{
+/* .icon-checkbox-holder{
     position: relative;
-}
+} */
 .checkbox-input:checked + .icon-checkbox{
     background-color: var(--effect-text-color);
     border: none;
@@ -782,6 +787,7 @@ span{
     color: var(--basic-color);
 }
 .footer-submit-email{
+    color: var(--basic-color);
     margin-right: 12px;
     min-width: 358px;
     padding: 15px 0 15px 16px;
