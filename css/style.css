@@ -787,6 +787,7 @@ span{
     color: var(--basic-color);
 }
 .footer-submit-email{
+    outline: none;
     color: var(--basic-color);
     margin-right: 12px;
     min-width: 358px;
